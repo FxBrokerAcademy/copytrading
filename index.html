@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Copy Trading Explained – How It Works, Benefits & FAQ | Fxbrokeracademy</title>
+  <meta name="description" content="Copy trading explained in clear terms: what it is, how it works, who it suits, and what to consider. Transparent, neutral, education-focused." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand:#1f7ae0; --brand-2:#6ab0ff;
+      --bg:#0a0d12; --card:#121722; --muted:#95a1b2; --text:#e9eef6;
+      --ok:#38c793; --warn:#ffc861;
+      --radius:16px; --radius-sm:12px; --radius-lg:22px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg,#0a0d12 0%, #0e1522 100%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1120px;margin:0 auto;padding:24px}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand__logo{width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--brand),var(--brand-2));display:grid;place-items:center;color:#001a2d;font-weight:800}
+    .brand__name{font-weight:700;letter-spacing:.2px}
+    .btn{display:inline-block;background:var(--brand);color:#001a2d;font-weight:700;padding:12px 18px;border-radius:999px;box-shadow:var(--shadow);border:0;cursor:pointer}
+    .btn:hover{filter:brightness(1.05)}
+    .btn--ghost{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.12)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:32px 0}
+    .hero__card{background:radial-gradient(1200px 500px at 0% 0%,rgba(31,122,224,.15),transparent),var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow)}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-weight:600;font-size:.85rem;letter-spacing:.3px;text-transform:uppercase}
+    h1{font-size:clamp(28px,3.2vw,44px);line-height:1.2;margin:.2em 0 .4em}
+    .lead{color:#cfd8e6;font-size:1.05rem}
+    .hero__cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+    .hero__img{border-radius:var(--radius-lg);overflow:hidden;border:1px solid rgba(255,255,255,.06);box-shadow:var(--shadow)}
+    .hero__img img{display:block;width:100%;height:auto}
+    .grid{display:grid;gap:18px}
+    .grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.grid--3{grid-template-columns:1fr}.grid--2{grid-template-columns:1fr}}
+    .card{background:var(--card);border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);padding:22px}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(122,199,255,.08);border:1px solid rgba(122,199,255,.25);color:var(--brand-2);padding:6px 10px;border-radius:999px;font-size:.85rem;font-weight:600}
+    .kicker{color:var(--muted);text-transform:uppercase;font-size:.8rem;letter-spacing:.3px;font-weight:700}
+    h2{font-size:clamp(22px,2.8vw,30px);margin:.2em 0 .6em}
+    ul,ol{padding-left:18px;margin:0}
+    .list--check li{margin:.3em 0;padding-left:6px}
+    .cta-block{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:8px}
+    .note{font-size:.95rem;color:#c8d3e2}
+    .disclaimer{font-size:.9rem;color:#b7c3d6}
+    .faq summary{cursor:pointer;font-weight:700;margin:6px 0}
+    .footer{color:#9fb0c6;font-size:.9rem;padding:24px 0;border-top:1px solid rgba(255,255,255,.06);margin-top:28px}
+    .muted{color:var(--muted)}
+    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+    .consent{position:fixed;inset:auto 0 0 0;background:#0f141f;border-top:1px solid rgba(255,255,255,.12);padding:14px;display:flex;gap:12px;align-items:center;justify-content:center;z-index:999}
+    .consent p{margin:0;color:#cfd8e6;font-size:.95rem}
+  </style>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What is copy trading?","acceptedAnswer":{"@type":"Answer","text":"Copy trading is a form of social trading where the decisions of experienced traders are transparently tracked and, based on your settings, mirrored to a connected account. It is primarily intended as a learning and observation tool."}},
+      {"@type":"Question","name":"How does copy trading work in practice?","acceptedAnswer":{"@type":"Answer","text":"Users choose a trader with a verifiable history, connect their trading account through a platform, and set parameters. New decisions by the selected trader are mirrored automatically and remain under your control at all times."}},
+      {"@type":"Question","name":"Who is copy trading suitable for?","acceptedAnswer":{"@type":"Answer","text":"For beginners and interested learners who want to understand market mechanisms without making every single decision themselves. Advanced traders can also compare and analyse strategies."}},
+      {"@type":"Question","name":"What are the risks?","acceptedAnswer":{"@type":"Answer","text":"Trading the financial markets involves risks. Past activity is not an indicator of future developments. Careful research and a responsible approach are recommended."}}
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <header class="wrap nav" aria-label="Main navigation">
+    <div class="brand">
+      <div class="brand__logo" aria-hidden="true">FX</div>
+      <div class="brand__name">Fxbrokeracademy</div>
+    </div>
+    <nav></nav>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__card">
+        <span class="eyebrow">Copy trading explained</span>
+        <h1 id="hero-title">Learn how copy trading works – clear, transparent, and practical</h1>
+        <p class="lead">Observe the strategies of experienced traders, understand their decision-making, and use copy trading as a structured learning path—step by step.</p>
+        <div class="hero__cta" role="group" aria-label="Primary actions">
+          <a class="btn" href="#how" id="cta-how">How it works</a>
+          <a class="btn btn--ghost" href="#learn" id="cta-why">Why understanding matters</a>
+        </div>
+        <p class="note" style="margin-top:10px;">Neutral, transparent, and education-focused. No promises — compliant with advertising guidelines.</p>
+      </div>
+      <figure class="hero__img" aria-labelledby="img-cap">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1600&auto=format&fit=crop" alt="Abstract display of market charts on a screen" loading="eager" />
+        <figcaption id="img-cap" class="sr-only">Charts as a visual metaphor for market observation.</figcaption>
+      </figure>
+    </section>
+
+    <section class="grid grid--2 card" id="what" aria-labelledby="what-title" style="margin-top:12px;">
+      <div>
+        <span class="kicker">Basics</span>
+        <h2 id="what-title">What is copy trading?</h2>
+        <p>Copy trading is a form of social trading where the decisions of experienced traders are transparently tracked and—based on your own settings—automatically mirrored to a connected account. It lets newcomers watch real decision processes and make market mechanisms tangible.</p>
+        <p>The focus is on understanding: strategies, risk parameters, and reactions to market changes become visible and can be analysed.</p>
+      </div>
+      <div class="card">
+        <span class="badge" aria-hidden="true">Transparency & control</span>
+        <ul class="list--check" style="margin-top:10px;">
+          <li>Learn by observing real strategies</li>
+          <li>Set parameters yourself and adjust anytime</li>
+          <li>Activities are traceable and documented</li>
+          <li>Pause or switch strategies whenever needed</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="how" aria-labelledby="how-title" style="margin-top:12px;">
+      <span class="kicker">Process</span>
+      <h2 id="how-title">Copy trading in three steps</h2>
+      <ol>
+        <li><strong>Select a trader:</strong> Choose a trader on a copy-trading platform with a verifiable history and a clear approach.</li>
+        <li><strong>Connect your account:</strong> Link your trading account securely and set individual parameters (e.g., allocation size, max concurrent positions).</li>
+        <li><strong>Automatic execution:</strong> New decisions by the selected trader are mirrored automatically—fully controllable and changeable at any time.</li>
+      </ol>
+      <div class="cta-block">
+        <a class="btn" id="cta" href="https://www.fxbrokeracademy.com/xm" target="_blank" rel="noopener">Learn more about the learning path</a>
+        <span class="muted">Inform yourself without obligation — neutral & transparent.</span>
+      </div>
+    </section>
+
+    <section class="grid grid--3" aria-labelledby="benefits-title" style="margin-top:12px;">
+      <div class="card">
+        <h3 id="benefits-title" class="kicker">Who it suits</h3>
+        <p>Anyone who wants to understand financial markets and prefers a structured, observation-based start—without analysing every chart themselves.</p>
+      </div>
+      <div class="card">
+        <h3 class="kicker">Benefits</h3>
+        <ul class="list--check">
+          <li>Understanding strategies & decisions</li>
+          <li>Time savings through automation</li>
+          <li>Transparent insight into processes</li>
+          <li>Full control over parameters</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3 class="kicker">What to consider</h3>
+        <ul class="list--check">
+          <li>Verifiable strategy history</li>
+          <li>Clear risk management & limits</li>
+          <li>Understandable documentation of the approach</li>
+          <li>Regularly review your settings</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card" id="learn" aria-labelledby="learn-title" style="margin-top:12px;">
+      <span class="kicker">Education focus</span>
+      <h2 id="learn-title">Why understanding copy trading matters</h2>
+      <p>Many jump into trading without really knowing the basics. Copy trading enables a structured learning path: strategies become transparent, decisions traceable, and connections tangible — helping you reflect on and improve your own approach.</p>
+    </section>
+
+    <section class="card" aria-labelledby="risk-title" style="margin-top:12px;">
+      <span class="kicker">Notice</span>
+      <h2 id="risk-title">Risk & learning notice</h2>
+      <p class="disclaimer">Trading the financial markets involves risks. Copy trading is not a guarantee of outcomes and should primarily be seen as a learning and observation tool. Do your research carefully and adjust settings responsibly. Past activity is not an indicator of future developments.</p>
+    </section>
+
+    <section class="card faq" id="faq" aria-labelledby="faq-title" style="margin-top:12px;">
+      <span class="kicker">FAQ</span>
+      <h2 id="faq-title">Frequently asked questions</h2>
+
+      <details>
+        <summary>Is copy trading suitable for beginners?</summary>
+        <p>Yes. It lets you observe decisions of experienced traders in real time and better understand their approach—without doing every analysis yourself.</p>
+      </details>
+
+      <details>
+        <summary>Do I keep control over my account?</summary>
+        <p>Yes. You set the parameters, can pause, switch strategies, or manually adjust individual positions.</p>
+      </details>
+
+      <details>
+        <summary>What should I consider when choosing a trader?</summary>
+        <p>Verifiable history, clear strategy, documented risk management, and regular communication of the approach.</p>
+      </details>
+
+      <details>
+        <summary>What costs may apply?</summary>
+        <p>Depending on the platform, fees may apply (e.g., service or management fees). Review each platform’s terms carefully.</p>
+      </details>
+    </section>
+
+    <section class="card" id="contact" aria-labelledby="contact-title" style="margin-top:12px;">
+      <span class="kicker">Next step</span>
+      <h2 id="contact-title">Learn more — neutral & transparent</h2>
+      <p>At <strong>fxbrokeracademy.com</strong> you’ll find clear explanations, training units, and hands-on content on copy trading, risk parameters, and platform comparisons.</p>
+    </section>
+  </main>
+
+  <footer class="wrap footer" role="contentinfo">
+    <div>© <span id="year"></span> Fxbrokeracademy. All rights reserved.</div>
+    <div style="margin-top:8px">
+      <a href="/de/impressum">Imprint</a> · <a href="/de/datenschutz">Privacy</a> · <a href="/de/risikohinweis">Risk notice</a>
+    </div>
+    <div class="muted" style="margin-top:8px">This page is for information only and does not replace individual advice.</div>
+  </footer>
+
+  <div class="consent" id="consent" role="dialog" aria-live="polite" aria-label="Consent for measurement">
+    <p>We use anonymized measurement (e.g., Google Ads) to understand which content is helpful. Do you agree?</p>
+    <button class="btn" id="consent-yes">Yes, agree</button>
+    <button class="btn btn--ghost" id="consent-no">No, decline</button>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const CONSENT_KEY = 'fxba_consent';
+    const consentBar = document.getElementById('consent');
+    const loadGtag = () => {
+      if (window.gtagLoaded) return;
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} window.gtag = gtag; window.gtagLoaded = true;
+      gtag('js', new Date());
+      gtag('consent', 'update', { ad_user_data: 'granted', ad_personalization: 'granted', ad_storage: 'granted', analytics_storage: 'granted' });
+      gtag('config', 'AW-XXXXXXX');
+      const s = document.createElement('script');
+      s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXX';
+      document.head.appendChild(s);
+    };
+    const denyGtag = () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);} window.gtag = gtag;
+      gtag('consent', 'default', { ad_user_data: 'denied', ad_personalization: 'denied', ad_storage: 'denied', analytics_storage: 'denied' });
+    };
+    const saved = localStorage.getItem(CONSENT_KEY);
+    if (saved === 'granted'){ consentBar.style.display='none'; loadGtag(); }
+    else if (saved === 'denied'){ consentBar.style.display='none'; denyGtag(); }
+    document.getElementById('consent-yes').addEventListener('click', ()=>{ localStorage.setItem(CONSENT_KEY,'granted'); consentBar.style.display='none'; loadGtag(); });
+    document.getElementById('consent-no').addEventListener('click', ()=>{ localStorage.setItem(CONSENT_KEY,'denied'); consentBar.style.display='none'; denyGtag(); });
+
+    function trackLead(label){
+      if (typeof gtag === 'function'){
+        gtag('event','lead', { 'send_to':'AW-XXXXXXX', 'event_label': label || 'copytrading' });
+      }
+    }
+    const cta = document.getElementById('cta');
+    const ctaHow = document.getElementById('cta-how');
+    const ctaWhy = document.getElementById('cta-why');
+    if (cta) cta.addEventListener('click', ()=>trackLead('cta_hero'));
+    if (ctaHow) ctaHow.addEventListener('click', ()=>trackLead('cta_how'));
+    if (ctaWhy) ctaWhy.addEventListener('click', ()=>trackLead('cta_why'));
+  </script>
+</body>
+</html>
